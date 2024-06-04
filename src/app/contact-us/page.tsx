@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactUsPage() {
 	return (
-		<div className="w-full max-w-2xl mx-auto space-y-8 py-12 md:py-16 lg:py-20">
+		<div className="w-full max-w-3xl mx-auto space-y-8 py-12 md:py-16 lg:py-20 px-3 sm:px-0">
 			<div className="space-y-4">
 				<h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
 					Get in touch
