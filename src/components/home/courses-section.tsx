@@ -69,7 +69,7 @@ const CourseCard = ({ course }: { course: CourseType }) => {
 	return (
 		<div
 			key={course.name}
-			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl hover:scale-105 hover:-mt-3 transition-all"
+			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl hover:scale-105 hover:-mt-3 transition-all "
 		>
 			<h4
 				className={cn(
