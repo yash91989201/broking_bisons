@@ -1,3 +1,22 @@
+export const CAROUSEL_SLIDES = [
+  {
+    heading: "Master the Stock Market",
+    description: "Gain a deep understanding of stock market fundamentals and advanced trading strategies with our comprehensive courses.",
+  },
+  {
+    heading: "Learn from Industry Experts",
+    description: "Get insights and practical advice from seasoned professionals with years of experience in the stock market.",
+  },
+  {
+    heading: "Invest with Confidence",
+    description: "Develop the skills and knowledge needed to make informed investment decisions and manage your portfolio effectively.",
+  },
+  {
+    heading: "Start Your Journey to Financial Freedom",
+    description: "Take the first step towards becoming a self-dependent trader and achieving your financial goals.",
+  }
+]
+
 export const BENEFITS = [
   {
     label: " Master Comprehensive Trading Skills",
