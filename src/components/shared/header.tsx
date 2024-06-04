@@ -21,14 +21,16 @@ export default function Header() {
 			<div className="sm:max-w-[90vw] flex items-center justify-between mx-auto p-3 lg:py-6 lg:px-0">
 				<Link href="/">
 					<div className="flex items-center gap-3">
-						<div className="relative sm:w-24 sm:h-16 w-14 h-12 rounded-full bg-[var(--background)] overflow-hidden">
+						<div className="relative sm:w-24 sm:h-16 w-16 h-12 rounded-full bg-[var(--background)] overflow-hidden">
 							<Image src="/assets/logo.png" alt="logo" fill />
 						</div>
 						<div className="flex flex-col gap-1.5">
-							<h1 className="text-xl lg:text-3xl font-semibold">
+							<h1 className="sm:text-xl lg:text-3xl font-semibold">
 								Broking Bisons
 							</h1>
-							<h3 className="text-gray-300 text-sm">Academy of Stock market</h3>
+							<h3 className="text-gray-300 text-xs sm:text-sm">
+								Academy of Stock market
+							</h3>
 						</div>
 					</div>
 				</Link>
