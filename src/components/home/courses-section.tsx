@@ -21,7 +21,7 @@ export default function CoursesSection() {
 	const displayCourses = COURSES.filter((course) => course.isPro === proCourse);
 
 	return (
-		<section className="lg:px-6 my-8 lg:my-16">
+		<section className="lg:px-6 my-8 lg:my-16" id="courses-section">
 			<div className="flex items-center justify-between flex-col max-w-[90vw] mx-auto">
 				{/* section heading */}
 				<div className="text-center space-y-3">
@@ -69,7 +69,7 @@ const CourseCard = ({ course }: { course: CourseType }) => {
 	return (
 		<div
 			key={course.name}
-			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl"
+			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl hover:scale-105 hover:-mt-3 transition-all"
 		>
 			<h4
 				className={cn(

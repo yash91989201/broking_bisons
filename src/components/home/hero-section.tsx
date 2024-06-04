@@ -9,11 +9,12 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 // CONSTANTS
 import { CAROUSEL_SLIDES } from "@/constants";
 // ICONS
 import { ChevronRightCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
 	return (
@@ -46,10 +47,15 @@ export default function HeroSection() {
 									expert-led, tailored courses are designed to meet your unique
 									needs and goals.
 								</p>
-								<Button className="gap-3 dark:text-white w-fit">
+								<Link
+									href="#courses-section"
+									className={buttonVariants({
+										className: "gap-3 dark:text-white w-fit",
+									})}
+								>
 									<span>Explore our courses</span>
 									<ChevronRightCircle className="size-4" />
-								</Button>
+								</Link>
 							</div>
 						</CarouselItem>
 						{CAROUSEL_SLIDES.map((carousel, index) => (
