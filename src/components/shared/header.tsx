@@ -19,7 +19,9 @@ export default function Header() {
 	return (
 		<header className="lg:px-6 border-b backdrop-filter backdrop-blur-md sticky top-0 bg-opacity-40 z-50 bg-[var(--background)]">
 			<div className="max-w-[90vw] flex items-center justify-between mx-auto p-3 px-1.5 lg:py-6 lg:px-0">
-				<h1 className="text-xl lg:text-3xl font-semibold">Broking Bisons</h1>
+				<Link href="/" className="text-xl lg:text-3xl font-semibold">
+					Broking Bisons
+				</Link>
 				<nav className="md:flex items-center gap-3 hidden">
 					<Link
 						className={cn(
@@ -71,46 +73,54 @@ export default function Header() {
 							<SheetTitle>Broking Bisons</SheetTitle>
 						</SheetHeader>
 						<nav className="flex flex-col items-start gap-3 pt-8 text-sm sm:text-base">
-							<Link
-								className={cn(
-									pathname === "/"
-										? "text-primary font-semibold"
-										: "hover:text-primary"
-								)}
-								href="/"
-							>
-								Home
-							</Link>
-							<Link
-								className={cn(
-									pathname === "/courses"
-										? "text-primary font-semibold"
-										: "hover:text-primary"
-								)}
-								href="/courses"
-							>
-								Courses
-							</Link>
-							<Link
-								className={cn(
-									pathname === "/contact-us"
-										? "text-primary font-semibold"
-										: "hover:text-primary"
-								)}
-								href="/contact-us"
-							>
-								Contact Us
-							</Link>
-							<Link
-								className={cn(
-									pathname === "/about-us"
-										? "text-primary font-semibold"
-										: "hover:text-primary"
-								)}
-								href="/about-us"
-							>
-								About Us
-							</Link>
+							<SheetTrigger asChild>
+								<Link
+									className={cn(
+										pathname === "/"
+											? "text-primary font-semibold"
+											: "hover:text-primary"
+									)}
+									href="/"
+								>
+									Home
+								</Link>
+							</SheetTrigger>
+							<SheetTrigger asChild>
+								<Link
+									className={cn(
+										pathname === "/courses"
+											? "text-primary font-semibold"
+											: "hover:text-primary"
+									)}
+									href="/courses"
+								>
+									Courses
+								</Link>
+							</SheetTrigger>
+							<SheetTrigger asChild>
+								<Link
+									className={cn(
+										pathname === "/contact-us"
+											? "text-primary font-semibold"
+											: "hover:text-primary"
+									)}
+									href="/contact-us"
+								>
+									Contact Us
+								</Link>
+							</SheetTrigger>
+							<SheetTrigger asChild>
+								<Link
+									className={cn(
+										pathname === "/about-us"
+											? "text-primary font-semibold"
+											: "hover:text-primary"
+									)}
+									href="/about-us"
+								>
+									About Us
+								</Link>
+							</SheetTrigger>
 						</nav>
 					</SheetContent>
 				</Sheet>
