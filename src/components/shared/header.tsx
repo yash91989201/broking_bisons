@@ -20,7 +20,7 @@ export default function Header() {
 		<header className="lg:px-6 border-b backdrop-filter backdrop-blur-md sticky top-0 bg-opacity-40 z-50 bg-[var(--background)]">
 			<div className="sm:max-w-[90vw] flex items-center justify-between mx-auto p-3 lg:py-6 lg:px-0">
 				<Link href="/">
-					<div className="flex items-center gap-3">
+					<div className="flex items-center gap-1.5 sm:gap-3">
 						<div className="relative sm:w-24 sm:h-16 w-16 h-12 rounded-full bg-[var(--background)] overflow-hidden">
 							<Image src="/assets/logo.png" alt="logo" fill />
 						</div>
