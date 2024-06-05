@@ -100,6 +100,18 @@ export default function Header() {
 							<SheetTrigger asChild>
 								<Link
 									className={cn(
+										pathname === "/about-us"
+											? "text-primary font-semibold"
+											: "hover:text-primary"
+									)}
+									href="/about-us"
+								>
+									About Us
+								</Link>
+							</SheetTrigger>
+							<SheetTrigger asChild>
+								<Link
+									className={cn(
 										pathname === "/courses"
 											? "text-primary font-semibold"
 											: "hover:text-primary"
@@ -119,18 +131,6 @@ export default function Header() {
 									href="/contact-us"
 								>
 									Contact Us
-								</Link>
-							</SheetTrigger>
-							<SheetTrigger asChild>
-								<Link
-									className={cn(
-										pathname === "/about-us"
-											? "text-primary font-semibold"
-											: "hover:text-primary"
-									)}
-									href="/about-us"
-								>
-									About Us
 								</Link>
 							</SheetTrigger>
 						</nav>

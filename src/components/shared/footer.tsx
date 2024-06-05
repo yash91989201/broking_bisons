@@ -18,6 +18,11 @@ export default function Footer() {
 							</a>
 						</li>
 						<li>
+							<a href="/about-us" className="hover:underline">
+								About Us
+							</a>
+						</li>
+						<li>
 							<a href="/courses" className="hover:underline me-4 md:me-6">
 								Courses
 							</a>
@@ -25,11 +30,6 @@ export default function Footer() {
 						<li>
 							<a href="/contact-us" className="hover:underline me-4 md:me-6">
 								Contact Us
-							</a>
-						</li>
-						<li>
-							<a href="/about-us" className="hover:underline">
-								About Us
 							</a>
 						</li>
 					</ul>
