@@ -23,7 +23,7 @@ export default function ReasonCard({
 			ref={ref}
 			className={cn(
 				isIntersecting
-					? "animate-in xl:slide-in-from-top slide-in-from-left xl:slide-in-from-left-0 fade-in-0 duration-700"
+					? "animate-fade-in-left xl:animate-fade-in-down fade-in-0"
 					: "",
 				"flex flex-col gap-6 max-w-96 items-center bg-gray-900 p-6 lg:pt-0 rounded-xl xl:hover:scale-105 transition-all"
 			)}

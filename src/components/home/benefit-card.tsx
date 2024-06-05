@@ -21,7 +21,7 @@ export default function BenefitCard({
 			ref={ref}
 			className={cn(
 				isIntersecting
-					? "animate-in xl:slide-in-from-top slide-in-from-left xl:slide-in-from-left-0 fade-in-0 duration-700"
+					? "animate-fade-in-left xl:animate-fade-in-down fade-in-0"
 					: "",
 				"flex flex-col gap-6 w-64 lg:w-72 items-center transition-all"
 			)}
