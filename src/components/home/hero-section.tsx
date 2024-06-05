@@ -37,11 +37,11 @@ export default function HeroSection() {
 					<CarouselContent>
 						<CarouselItem>
 							<div className="flex flex-col max-w-2xl gap-3">
-								<h2 className="text-xl lg:text-3xl font-semibold space-x-3">
+								<h2 className="text-xl lg:text-5xl font-semibold space-x-3">
 									<span>Master Stock Trading with</span>
 									<span className="text-primary">Broking Bisons</span>
 								</h2>
-								<p className="text-gray-300 text-sm lg:text-base">
+								<p className="text-sm lg:text-lg">
 									We offer online courses to help individuals of all experience
 									levels master stock market trading and investing. Our
 									expert-led, tailored courses are designed to meet your unique
@@ -50,7 +50,8 @@ export default function HeroSection() {
 								<Link
 									href="#courses-section"
 									className={buttonVariants({
-										className: "gap-3 dark:text-white w-fit",
+										className:
+											"gap-3 dark:text-white w-fit text-base lg:text-lg",
 									})}
 								>
 									<span>Explore our courses</span>
@@ -64,14 +65,12 @@ export default function HeroSection() {
 									<h2
 										className={cn(
 											index % 2 === 0 ? "text-white" : "text-primary",
-											"text-xl lg:text-3xl font-semibold space-x-3"
+											"text-xl lg:text-5xl font-semibold space-x-3"
 										)}
 									>
 										{carousel.heading}
 									</h2>
-									<p className="text-gray-300 text-sm lg:text-base">
-										{carousel.description}
-									</p>
+									<p className="text-sm lg:text-lg">{carousel.description}</p>
 								</div>
 							</CarouselItem>
 						))}
