@@ -22,8 +22,10 @@ export default function ReasonCard({
 		<div
 			ref={ref}
 			className={cn(
-				isIntersecting ? "animate-in slide-in-from-top duration-700" : "",
-				"flex flex-col gap-6 max-w-96 items-center bg-gray-900 p-6 lg:pt-0 rounded-xl hover:scale-105 transition-all fade-in-50 delay-75"
+				isIntersecting
+					? "animate-in xl:slide-in-from-top slide-in-from-left xl:slide-in-from-left-0 fade-in-0 duration-700"
+					: "",
+				"flex flex-col gap-6 max-w-96 items-center bg-gray-900 p-6 lg:pt-0 rounded-xl xl:hover:scale-105 transition-all"
 			)}
 		>
 			<div className="relative aspect-square w-20 md:w-24 lg:w-32 lg:-mt-16">

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 // UTILS
@@ -10,15 +11,14 @@ import {
 	CarouselItem,
 } from "@/components/ui/carousel";
 import { Button, buttonVariants } from "@/components/ui/button";
-// CONSTANTS
-import { CAROUSEL_SLIDES } from "@/constants";
 // ICONS
 import { ChevronRightCircle } from "lucide-react";
-import Link from "next/link";
+// CONSTANTS
+import { CAROUSEL_SLIDES } from "@/constants";
 
 export default function HeroSection() {
 	return (
-		<section className="relative w-[99vw] aspect-square sm:aspect-video flex items-center justify-center">
+		<section className="relative aspect-square sm:aspect-video flex items-center justify-center">
 			<Image
 				src="/assets/hero-img.png"
 				alt="hero image"
@@ -26,7 +26,7 @@ export default function HeroSection() {
 				className="brightness-75"
 			/>
 
-			<div className="w-[90%] sm:w-4/5 md:w-3/4 lg:w-1/2 animate-in slide-in-from-top duration-700">
+			<div className="w-4/5 md:w-3/4 lg:w-1/2 animate-in slide-in-from-top duration-700">
 				<Carousel
 					plugins={[
 						Autoplay({

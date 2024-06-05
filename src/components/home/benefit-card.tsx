@@ -20,8 +20,10 @@ export default function BenefitCard({
 		<div
 			ref={ref}
 			className={cn(
-				isIntersecting ? "animate-in slide-in-from-top duration-700" : "",
-				"flex flex-col gap-6 w-64 lg:w-72 items-center transition-all fade-in-50 delay-75"
+				isIntersecting
+					? "animate-in xl:slide-in-from-top slide-in-from-left xl:slide-in-from-left-0 fade-in-0 duration-700"
+					: "",
+				"flex flex-col gap-6 w-64 lg:w-72 items-center transition-all"
 			)}
 		>
 			<div className="relative aspect-square w-20 md:w-24 lg:w-32">

@@ -15,13 +15,16 @@ export default function CourseCard({ course }: { course: CourseType }) {
 		threshold: 0.25,
 		freezeOnceVisible: true,
 	});
+
 	return (
 		<div
 			key={course.name}
 			ref={ref}
 			className={cn(
-				isIntersecting ? "animate-in slide-in-from-top " : "",
-				"flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl hover:scale-105 hover:-mt-3 transition-all fade-in-50 hover:duration-150  duration-700"
+				isIntersecting
+					? "animate-in xl:slide-in-from-top slide-in-from-left xl:slide-in-from-left-0 fade-in-0"
+					: "",
+				"flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl xl:hover:scale-105 xl:hover:-mt-3 transition-all xl:hover:duration-150 duration-700"
 			)}
 		>
 			<h4
