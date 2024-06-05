@@ -1,16 +1,23 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 // ICONS
 import { CheckIcon, ChevronRightCircle } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
-export default function Component() {
+export default function AboutUsPage() {
+	useEffect(() => {
+		Aos.init({});
+	}, []);
 	return (
 		<main>
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								About Us
 							</h1>
@@ -21,9 +28,12 @@ export default function Component() {
 								the stock market and achieve financial independence.
 							</p>
 						</div>
-						<div className="relative">
+						<div
+							className="relative aspect-video rounded-lg overflow-hidden"
+							data-aos="flip-left"
+						>
 							<Image
-								src="/assets/hero-img.png"
+								src="/assets/about-us-img.jpg"
 								alt="hero image"
 								fill
 								className="brightness-75"
@@ -35,7 +45,7 @@ export default function Component() {
 			<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								Our Mission
 							</h2>
@@ -51,7 +61,10 @@ export default function Component() {
 								decisions.
 							</p>
 						</div>
-						<div className="relative">
+						<div
+							className="relative rounded-lg overflow-hidden aspect-video"
+							data-aos="flip-left"
+						>
 							<Image
 								src="/assets/hero-img.png"
 								alt="hero image"
@@ -65,7 +78,7 @@ export default function Component() {
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								Experienced Instructors
 							</h2>
@@ -81,7 +94,7 @@ export default function Component() {
 								scenarios.
 							</p>
 						</div>
-						<div className="grid gap-6">
+						<div className="grid gap-6" data-aos="flip-left">
 							<div className="flex items-start gap-4">
 								<div className="relative rounded-full aspect-square w-40 overflow-hidden">
 									<Image
@@ -133,7 +146,7 @@ export default function Component() {
 			<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								Why Choose Us?
 							</h2>
@@ -183,9 +196,12 @@ export default function Component() {
 								</li>
 							</ul>
 						</div>
-						<div className="relative">
+						<div
+							className="relative rounded-lg overflow-hidden"
+							data-aos="flip-left"
+						>
 							<Image
-								src="/assets/hero-img.png"
+								src="/assets/why-choose-us.webp"
 								alt="hero image"
 								fill
 								className="brightness-75"
@@ -197,7 +213,7 @@ export default function Component() {
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								Our Vision
 							</h2>
@@ -212,9 +228,12 @@ export default function Component() {
 								our students.
 							</p>
 						</div>
-						<div className="relative">
+						<div
+							className="relative aspect-video rounded-lg overflow-hidden"
+							data-aos="flip-left"
+						>
 							<Image
-								src="/assets/hero-img.png"
+								src="/assets/our-vision-img.webp"
 								alt="hero image"
 								fill
 								className="brightness-75"
@@ -226,7 +245,7 @@ export default function Component() {
 			<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-						<div>
+						<div data-aos="fade-right">
 							<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
 								Join Us
 							</h2>
@@ -247,6 +266,7 @@ export default function Component() {
 							className={buttonVariants({
 								className: "gap-3 dark:text-white w-fit mx-auto my-auto",
 							})}
+							data-aos="zoom-in-down"
 						>
 							<span>Explore our courses</span>
 							<ChevronRightCircle className="size-4" />

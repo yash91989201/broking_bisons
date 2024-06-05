@@ -26,7 +26,7 @@ export default function HeroSection() {
 				className="brightness-75"
 			/>
 
-			<div className="w-4/5 md:w-3/4 lg:w-1/2 animate-in slide-in-from-top duration-700">
+			<div className="w-4/5 md:w-3/4 lg:w-1/2 animate-in slide-in-from-top duration-700 backdrop-filter backdrop-blur-md bg-gray-900/30 p-6 rounded-md">
 				<Carousel
 					plugins={[
 						Autoplay({
