@@ -14,7 +14,7 @@ export default function ReasonCard({
 	reason: (typeof REASONS)[0];
 }) {
 	const { isIntersecting, ref } = useIntersectionObserver({
-		threshold: 0.5,
+		threshold: 0.25,
 		freezeOnceVisible: true,
 	});
 

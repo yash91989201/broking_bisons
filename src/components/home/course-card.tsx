@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useIntersectionObserver } from "usehooks-ts";
+import { useIntersectionObserver, useMediaQuery } from "usehooks-ts";
 // UTILS
 import { cn, formatPrice } from "@/lib/utils";
 // TYPES
@@ -10,22 +10,22 @@ import { Button } from "@/components/ui/button";
 // ICONS
 import { CircleCheckBig } from "lucide-react";
 
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 export default function CourseCard({ course }: { course: CourseType }) {
-	const { isIntersecting, ref } = useIntersectionObserver({
-		threshold: 0.5,
-		freezeOnceVisible: true,
-	});
+	const isMobile = useMediaQuery("(max-width: 768px)");
+
+	useEffect(() => {
+		AOS.init({});
+	}, []);
 
 	return (
 		<div
 			key={course.name}
-			ref={ref}
-			className={cn(
-				isIntersecting
-					? "animate-fade-in-left xl:animate-fade-in-down fade-in-0"
-					: "",
-				"flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl xl:hover:scale-105 xl:hover:-mt-3 transition-all xl:hover:duration-150 duration-700"
-			)}
+			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl xl:hover:scale-105 xl:hover:-mt-3 transition-all xl:hover:duration-150 duration-700"
+			data-aos={isMobile ? "fade-right" : "fade-up"}
 		>
 			<h4
 				className={cn(
