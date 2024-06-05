@@ -12,7 +12,7 @@ import { CircleCheckBig } from "lucide-react";
 
 export default function CourseCard({ course }: { course: CourseType }) {
 	const { isIntersecting, ref } = useIntersectionObserver({
-		threshold: 0.25,
+		threshold: 0.5,
 		freezeOnceVisible: true,
 	});
 
