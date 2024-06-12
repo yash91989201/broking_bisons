@@ -34,7 +34,7 @@ export default function Header() {
 						</div>
 					</div>
 				</Link>
-				<nav className="md:flex items-center gap-3 hidden">
+				<nav className="md:flex items-center gap-12 hidden">
 					<Link
 						className={cn(
 							pathname === "/"

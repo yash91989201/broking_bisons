@@ -24,7 +24,7 @@ export default function CourseCard({ course }: { course: CourseType }) {
 	return (
 		<div
 			key={course.name}
-			className="flex flex-col gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl xl:hover:scale-105 xl:hover:-mt-3 transition-all xl:hover:duration-150 duration-700"
+			className="flex flex-col h-fit gap-6 w-80 md:w-96 items-center bg-gray-900 p-6 rounded-xl xl:hover:scale-105 xl:hover:-mt-6 transition-all xl:hover:duration-150 duration-700 hover:scale-110"
 			data-aos={isMobile ? "fade-right" : "fade-up"}
 		>
 			<h4
@@ -39,7 +39,7 @@ export default function CourseCard({ course }: { course: CourseType }) {
 				<Image src={course.imgSrc} alt="course" fill />
 			</div>
 			<p>What will I learn ?</p>
-			<div className="flex flex-col gap-3 flex-1">
+			<div className="flex flex-col gap-3 ">
 				{course.curriculum.map((item) => (
 					<div key={item} className="flex items-start gap-3">
 						<CircleCheckBig
