@@ -89,6 +89,24 @@ const config = {
           '0%': { opacity: '0', transform: 'translateX(-36px)', scale: "0.75" },
           '100%': { opacity: '1', transform: 'translateX(0)', scale: "1" },
         },
+        "move-image": {
+          "0%": {
+            transform: "translate(0, 0)",
+          },
+          "25%": {
+            transform: "translate(0, -5%)"
+          },
+          "50%": {
+            transform: "translate(-5%, -5%)"
+          },
+          "75%": {
+            transform: "translate(-5%, 0)"
+          },
+          "100%": {
+            transform: "translate(0, 0)"
+          },
+
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -97,6 +115,7 @@ const config = {
         'fade-in-down': 'fade-in-down 0.7s ease-in-out forwards',
         'fade-in-right': 'fade-in-right 0.7s ease-in-out forwards',
         'fade-in-left': 'fade-in-left 0.7s ease-in-out forwards',
+        "move-image": "move-image 10s infinite ease-in-out"
       },
     },
   },

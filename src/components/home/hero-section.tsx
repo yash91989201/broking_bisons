@@ -1,38 +1,83 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 // UI
 import { buttonVariants } from "@/components/ui/button";
 // ICONS
 import { ChevronRightCircle } from "lucide-react";
+// CONSTANTS
+import { HERO_IMG_LIST as images } from "@/constants";
+
+const sliderVariants = {
+	incoming: (direction: number) => ({
+		x: direction > 0 ? "100%" : "-100%",
+		scale: 1.2,
+		opacity: 0,
+	}),
+	active: { x: 0, scale: 1, opacity: 1 },
+	exit: (direction: number) => ({
+		x: direction > 0 ? "-100%" : "100%",
+		scale: 1,
+		opacity: 0.2,
+	}),
+};
+
+const sliderTransition = {
+	duration: 1,
+	ease: [0.56, 0.03, 0.12, 1.04],
+};
 
 export default function HeroSection() {
-	const videoRef = useRef<HTMLVideoElement | null>(null);
+	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
-		if (videoRef.current) {
-			videoRef.current.playbackRate = 0.8;
-		}
+		const interval = setInterval(() => {
+			setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+		}, 3500);
+		return () => clearInterval(interval);
 	}, []);
 
 	return (
-		<section className="relative aspect-square sm:aspect-video flex flex-col items-center justify-center">
-			<div className="sm:absolute w-full h-fit sm:h-full overflow-hidden">
-				{/* <Image
-					src="/assets/hero-img.png"
-					alt="hero image"
-					fill
-					className="brightness-75"
-				/> */}
-				<video
-					ref={videoRef}
-					src="/assets/hero-video.mp4"
-					className="sm:absolute w-screen sm:h-full"
-					autoPlay
-				/>
+		<section className="relative aspect-square sm:aspect-video ">
+			<div className="w-full h-[60vh]">
+				<AnimatePresence>
+					{images.map(
+						(image, index) =>
+							index === currentIndex && (
+								<motion.div
+									key={image}
+									className="absolute inset-0"
+									initial={{
+										opacity: 0.75,
+										scale: 0.95,
+										filter: "brightness(0.8)",
+									}}
+									animate={{ opacity: 1, scale: 1, filter: "brightness(1)" }}
+									exit={{
+										opacity: 0.75,
+										scale: 0.95,
+										filter: "brightness(0.8)",
+									}}
+									transition={{
+										opacity: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
+										scale: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
+										filter: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
+									}}
+								>
+									{/* eslint-disable-next-line */}
+									<img
+										src={image}
+										alt={`Slide ${index}`}
+										className="w-full h-full object-cover"
+									/>
+								</motion.div>
+							)
+					)}
+				</AnimatePresence>
 			</div>
 
-			<div className="w-4/5 lg:w-1/2 animate-in slide-in-from-top duration-700 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
+			<div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
 				{/* <h1 className="animate-text bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent text-3xl xl:text-8xl font-semibold"> */}
 				<h1
 					className="text-white text-lg md:text-3xl xl:text-6xl font-semibold"

@@ -1,3 +1,11 @@
+export const HERO_IMG_LIST = [
+  "/assets/hero-img-1.png",
+  "/assets/hero-img-2.png",
+  "/assets/hero-img-3.png",
+  "/assets/hero-img-4.png",
+  "/assets/hero-img-5.png",
+];
+
 export const CAROUSEL_SLIDES = [
   {
     heading: "Master the Stock Market",
