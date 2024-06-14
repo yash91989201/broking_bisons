@@ -19,11 +19,11 @@ export default function HeroSection() {
 				<div className="image"></div>
 			</div>
 
-			<div className="absolute top-[30%] sm:top-[60%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
+			<div className="absolute top-[30%] sm:top-[60%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-3 sm:gap-6 flex items-center flex-col">
 				{/* <h1 className="animate-text bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent text-3xl xl:text-8xl font-semibold"> */}
 				<h1
 					className={cn(
-						"text-white text-lg md:text-3xl xl:text-6xl font-semibold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
+						"text-white text-xl md:text-3xl xl:text-6xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
 						font.className
 					)}
 					data-aos="fade-up"
@@ -38,7 +38,7 @@ export default function HeroSection() {
 					)}
 				/> */}
 				<p
-					className="text-sm leading-6 text-white text-center lg:text-lg sm:block hidden"
+					className="text-xs leading-6 text-white text-center lg:text-lg sm:block hidden"
 					data-aos="fade-right"
 				>
 					BROKING BISONS is a startup that provides online courses on stock
@@ -59,12 +59,13 @@ export default function HeroSection() {
 				<Link
 					href="#courses-section"
 					className={buttonVariants({
-						className: "gap-3 dark:text-white w-fit h-14 text-base lg:text-lg",
+						className:
+							"gap-3 dark:text-white w-fit h-14 lg:text-lg sm:text-base text-xs",
 					})}
 					data-aos="fade-left"
 				>
 					<span>Explore our courses</span>
-					<ChevronRightCircle className="size-4" />
+					<ChevronRightCircle className="size-3 sm:size-4" />
 				</Link>
 			</div>
 		</section>
