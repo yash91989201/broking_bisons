@@ -9,25 +9,6 @@ import { ChevronRightCircle } from "lucide-react";
 // CONSTANTS
 import { HERO_IMG_LIST as images } from "@/constants";
 
-const sliderVariants = {
-	incoming: (direction: number) => ({
-		x: direction > 0 ? "100%" : "-100%",
-		scale: 1.2,
-		opacity: 0,
-	}),
-	active: { x: 0, scale: 1, opacity: 1 },
-	exit: (direction: number) => ({
-		x: direction > 0 ? "-100%" : "100%",
-		scale: 1,
-		opacity: 0.2,
-	}),
-};
-
-const sliderTransition = {
-	duration: 1,
-	ease: [0.56, 0.03, 0.12, 1.04],
-};
-
 export default function HeroSection() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -66,11 +47,7 @@ export default function HeroSection() {
 									}}
 								>
 									{/* eslint-disable-next-line */}
-									<img
-										src={image}
-										alt={`Slide ${index}`}
-										className="w-full h-full object-cover"
-									/>
+									<img src={image} className="w-full h-full object-cover" />
 								</motion.div>
 							)
 					)}
