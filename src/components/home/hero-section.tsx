@@ -19,7 +19,7 @@ export default function HeroSection() {
 				<div className="image"></div>
 			</div>
 
-			<div className="sm:absolute sm:top-[60%] mx-auto sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
+			<div className="absolute top-[30%] sm:top-[60%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
 				{/* <h1 className="animate-text bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent text-3xl xl:text-8xl font-semibold"> */}
 				<h1
 					className={cn(
