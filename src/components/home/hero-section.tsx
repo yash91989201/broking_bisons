@@ -1,67 +1,42 @@
 "use client";
+import "./hero-section.css";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 // UI
 import { buttonVariants } from "@/components/ui/button";
 // ICONS
 import { ChevronRightCircle } from "lucide-react";
 // CONSTANTS
-import { HERO_IMG_LIST as images } from "@/constants";
+import AnimatedTextWord from "@/components/shared/animated-text";
+import { Krona_One } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
 export default function HeroSection() {
-	const [currentIndex, setCurrentIndex] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-		}, 3500);
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
-		<section className="relative aspect-square sm:aspect-video ">
-			<div className="w-full h-[60vh]">
-				<AnimatePresence>
-					{images.map(
-						(image, index) =>
-							index === currentIndex && (
-								<motion.div
-									key={image}
-									className="absolute inset-0"
-									initial={{
-										opacity: 0.75,
-										scale: 0.95,
-										filter: "brightness(0.8)",
-									}}
-									animate={{ opacity: 1, scale: 1, filter: "brightness(1)" }}
-									exit={{
-										opacity: 0.75,
-										scale: 0.95,
-										filter: "brightness(0.8)",
-									}}
-									transition={{
-										opacity: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
-										scale: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
-										filter: { duration: 1.2, ease: [0.42, 0, 0.58, 1] },
-									}}
-								>
-									{/* eslint-disable-next-line */}
-									<img src={image} className="w-full h-full object-cover" />
-								</motion.div>
-							)
-					)}
-				</AnimatePresence>
+		<section className="">
+			<div className="relative w-full h-[40vh] sm:h-screen overflow-hidden">
+				<div className="image"></div>
 			</div>
 
-			<div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
+			<div className="sm:absolute sm:top-[60%] mx-auto sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-6 flex items-center flex-col">
 				{/* <h1 className="animate-text bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent text-3xl xl:text-8xl font-semibold"> */}
 				<h1
-					className="text-white text-lg md:text-3xl xl:text-6xl font-semibold"
+					className={cn(
+						"text-white text-lg md:text-3xl xl:text-6xl font-semibold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
+						font.className
+					)}
 					data-aos="fade-up"
 				>
 					BROKING BISONS
 				</h1>
+				{/* <AnimatedTextWord
+					text="BROKING  BISONS"
+					className={cn(
+						"text-white text-lg md:text-3xl xl:text-6xl font-semibold",
+						font.className
+					)}
+				/> */}
 				<p
 					className="text-sm leading-6 text-white text-center lg:text-lg sm:block hidden"
 					data-aos="fade-right"
