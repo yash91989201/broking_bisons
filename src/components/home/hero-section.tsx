@@ -15,7 +15,7 @@ const font = Krona_One({ subsets: ["latin"], weight: "400" });
 export default function HeroSection() {
 	return (
 		<section className="">
-			<div className="relative w-full h-[40vh] sm:h-screen overflow-hidden">
+			<div className="relative w-full h-[42vh] sm:h-screen overflow-hidden">
 				<div className="image"></div>
 			</div>
 
