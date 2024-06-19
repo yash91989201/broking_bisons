@@ -100,7 +100,7 @@ export default function AboutUsPage() {
 							<div className="flex items-start gap-4">
 								<div className="relative rounded-full aspect-square w-40 overflow-hidden">
 									<Image
-										src="/assets/hero-img.webp"
+										src="/assets/hero-img-1.png"
 										alt="hero image"
 										fill
 										className="brightness-75"
