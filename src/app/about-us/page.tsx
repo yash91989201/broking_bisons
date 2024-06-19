@@ -22,10 +22,13 @@ export default function AboutUsPage() {
 								About Us
 							</h1>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								Welcome to Broking Bisons, your trusted partner in stock market
-								education. We are dedicated to empowering individuals with the
-								knowledge and skills they need to navigate the complexities of
-								the stock market and achieve financial independence.
+								Welcome to Broking Bisons Academy of Stock Market, a leading
+								stock broking company dedicated to providing top-notch training,
+								trading, mentorship, and investment services. With a robust
+								client base of over 5,000 active clients, we are committed to
+								helping individuals and businesses achieve their financial goals
+								through comprehensive stock market education and personalized
+								support.
 							</p>
 						</div>
 						<div
@@ -50,15 +53,14 @@ export default function AboutUsPage() {
 								Our Mission
 							</h2>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								Our mission is to provide comprehensive, high-quality education
-								that makes stock market investing accessible to everyone. We
-								believe that with the right guidance and resources, anyone can
-								become a successful trader.
+								At Broking Bisons Academy of Stock Market, our mission is to
+								empower our clients with the knowledge and skills needed to
+								navigate the complexities of the stock market.
 							</p>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								Our goal is to demystify the stock market and equip you with
-								practical skills and confidence to make informed investment
-								decisions.
+								We strive to provide high-quality education and mentorship,
+								enabling our clients to make informed trading and investment
+								decisions confidently.
 							</p>
 						</div>
 						<div
@@ -218,14 +220,13 @@ export default function AboutUsPage() {
 								Our Vision
 							</h2>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								At Broking Bisons, we envision a world where financial education
-								is accessible to all. We strive to create an environment where
-								anyone can learn to invest wisely and achieve financial freedom.
+								Our vision is to be the premier destination for stock market
+								learning and investment services.
 							</p>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								Our commitment is to continuous improvement and innovation in
-								our teaching methods to ensure the best learning experience for
-								our students.
+								We aim to create a community of informed investors who can
+								achieve financial independence and success through the support
+								and guidance of Broking Bisons Academy of Stock Market.
 							</p>
 						</div>
 						<div
@@ -250,11 +251,13 @@ export default function AboutUsPage() {
 								Join Us
 							</h2>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-								Embark on your journey to financial independence with Broking
-								Bisons. Whether you are just starting out or looking to enhance
-								your trading skills, we have the right course for you. Let us
-								help you unlock the secrets of the stock market and build a
-								prosperous future.
+								Join Broking Bisons Academy of Stock Market and take the first
+								step towards mastering the stock market. Whether you&apos;s re a
+								beginner looking to learn the basics or an experienced trader
+								seeking advanced strategies, our academy offers a range of
+								courses and mentorship programs tailored to your needs. Become a
+								part of our growing community and start your journey to
+								financial success today.
 							</p>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
 								Thank you for choosing Broking Bisons. We look forward to being
