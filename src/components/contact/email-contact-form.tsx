@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 // SCHEMAS
 import { EmailContactSchema } from "@/lib/schemas";
@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { getMaxListeners } from "events";
 
 export default function EmailContactForm({
 	courseName,
@@ -31,11 +32,32 @@ export default function EmailContactForm({
 		},
 		resolver: zodResolver(EmailContactSchema),
 	});
-	const { control } = emailContactForm;
+
+	const { control, handleSubmit } = emailContactForm;
+
+	const submitAction: SubmitHandler<EmailContactSchemaType> = (formData) => {
+		const { name, message } = formData;
+		const email = "yashraj6370@gmail.com";
+		const contactForm = document.getElementById("email-contact-form");
+
+		// Open the user's email client with a pre-filled email
+		const emailMessage = encodeURIComponent(`Hi I am ${name}, ${message}`);
+		const emailLink = document.createElement("a");
+		emailLink.href = `mailto:${email}?subject=Enquiry for ${courseName} course&body=${emailMessage}`;
+		emailLink.target = "_blank";
+		emailLink.rel = "noopener noreferrer";
+
+		contactForm?.appendChild(emailLink);
+		emailLink.click();
+		contactForm?.removeChild(emailLink);
+	};
 
 	return (
 		<Form {...emailContactForm}>
-			<form className="grid gap-4">
+			<form
+				className="grid gap-4 email-contact-form"
+				onSubmit={handleSubmit(submitAction)}
+			>
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<FormField
 						control={control}

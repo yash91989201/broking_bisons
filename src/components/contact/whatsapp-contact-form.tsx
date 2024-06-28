@@ -37,7 +37,7 @@ export default function WhatsappContactForm({
 		const { name, message } = formData;
 
 		const whatsappMessage = `Hi I am ${name}, ${message}`;
-		const contactForm = document.getElementById("whatsapp-link-container");
+		const contactForm = document.getElementById("whatsapp-contact-form");
 
 		const link = document.createElement("a");
 		link.href = `https://wa.me/${6370106392}?text=${encodeURIComponent(
