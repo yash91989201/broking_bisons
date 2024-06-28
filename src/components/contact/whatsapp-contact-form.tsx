@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 // SCHEMAS
 import { WhatsappContactSchema } from "@/lib/schemas";
@@ -31,11 +31,32 @@ export default function WhatsappContactForm({
 		},
 		resolver: zodResolver(WhatsappContactSchema),
 	});
-	const { control } = whatsappContactForm;
+	const { control, handleSubmit } = whatsappContactForm;
+
+	const submitAction: SubmitHandler<WhatsappContactSchemaType> = (formData) => {
+		const { name, message } = formData;
+
+		const whatsappMessage = `Hi I am ${name}, ${message}`;
+		const contactForm = document.getElementById("whatsapp-link-container");
+
+		const link = document.createElement("a");
+		link.href = `https://wa.me/${6370106392}?text=${encodeURIComponent(
+			whatsappMessage
+		)}`;
+		link.target = "_blank";
+		link.rel = "noopener noreferrer";
+
+		contactForm?.appendChild(link);
+		link.click();
+		contactForm?.removeChild(link);
+	};
 
 	return (
 		<Form {...whatsappContactForm}>
-			<form className="grid gap-4">
+			<form
+				className="grid gap-4 whatsapp-contact-form"
+				onSubmit={handleSubmit(submitAction)}
+			>
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 					<FormField
 						control={control}
@@ -45,19 +66,6 @@ export default function WhatsappContactForm({
 								<FormLabel>Name</FormLabel>
 								<FormControl>
 									<Input {...field} placeholder="Enter your name" />
-								</FormControl>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
-					<FormField
-						control={control}
-						name="phone"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Phone Number</FormLabel>
-								<FormControl>
-									<Input {...field} placeholder="Enter a valid number" />
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -83,9 +91,7 @@ export default function WhatsappContactForm({
 						)}
 					/>
 				</div>
-				<Button type="submit" className="justify-self-end">
-					Submit
-				</Button>
+				<Button className="justify-self-end">Submit</Button>
 			</form>
 		</Form>
 	);
