@@ -49,6 +49,7 @@ export const BENEFITS = [
 export const COURSES = [
   // beginner courses
   {
+    id: "hSjyVu35",
     name: "Vistarah Training",
     imgSrc: "/assets/course-1-img.png",
     isPro: false,
@@ -65,6 +66,7 @@ export const COURSES = [
     ]
   },
   {
+    id: "vBVd1lAs",
     name: "Aatmanirbhar Training",
     imgSrc: "/assets/course-2-img.png",
     isPro: false,
@@ -82,6 +84,7 @@ export const COURSES = [
     ]
   },
   {
+    id: "RcpOlvDv",
     name: "Saksham Training",
     imgSrc: "/assets/course-3-img.png",
     isPro: false,
@@ -99,6 +102,7 @@ export const COURSES = [
   },
   // pro courses
   {
+    id: "jDA3NV0U",
     name: "Eklavya Training",
     imgSrc: "/assets/course-4-img.png",
     isPro: true,
@@ -115,6 +119,7 @@ export const COURSES = [
     ]
   },
   {
+    id: "a5ZlXby2",
     name: "Raajneeti Training",
     imgSrc: "/assets/course-5-img.png",
     isPro: true,
@@ -132,6 +137,7 @@ export const COURSES = [
     ]
   },
   {
+    id: "qTzPtUPU",
     name: "Chankya Training",
     imgSrc: "/assets/course-6-img.png",
     isPro: true,

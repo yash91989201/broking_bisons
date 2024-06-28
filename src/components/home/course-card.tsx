@@ -6,13 +6,14 @@ import { cn, formatPrice } from "@/lib/utils";
 // TYPES
 import { CourseType } from "@/lib/types";
 // UI
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 // ICONS
 import { CircleCheckBig } from "lucide-react";
 
 import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 export default function CourseCard({ course }: { course: CourseType }) {
 	const isMobile = useMediaQuery("(max-width: 768px)");
@@ -63,14 +64,20 @@ export default function CourseCard({ course }: { course: CourseType }) {
 					</span>
 				</p>
 			)}
-			<Button className="dark:text-white w-full lg:text-lg lg:h-12 rounded-full">
+			<Link
+				href={`/contact-us?course_id=${course.id}`}
+				className={buttonVariants({
+					variant: "default",
+					className: "dark:text-white w-full lg:text-lg lg:h-12 rounded-full",
+				})}
+			>
 				Buy @&nbsp;
 				{formatPrice(course.price, {
 					notation: "standard",
 				})}
 				&nbsp;
 				{course.paymentType === "monthly" ? "/mo" : "only"}
-			</Button>
+			</Link>
 		</div>
 	);
 }

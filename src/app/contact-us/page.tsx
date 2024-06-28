@@ -1,10 +1,19 @@
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+"use client";
+import { useSearchParams } from "next/navigation";
+// UI
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// CUSTOM COMPONENTS
+import EmailContactForm from "@/components/contact/email-contact-form";
+import WhatsappContactForm from "@/components/contact/whatsapp-contact-form";
+// CONSTANTS
+import { COURSES } from "@/constants";
 
 export default function ContactUsPage() {
+	const searchParams = useSearchParams();
+	const courseId = searchParams.get("course_id") ?? "";
+
+	const course = COURSES.find(({ id }) => id === courseId);
+
 	return (
 		<div className="w-full max-w-3xl mx-auto space-y-8 py-12 md:py-16 lg:py-20 px-3 sm:px-0">
 			<div className="space-y-4">
@@ -26,54 +35,10 @@ export default function ContactUsPage() {
 					</TabsTrigger>
 				</TabsList>
 				<TabsContent value="email" className="space-y-4">
-					<form className="grid gap-4">
-						<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-							<div className="space-y-2">
-								<Label htmlFor="name">Name</Label>
-								<Input id="name" placeholder="Enter your name" />
-							</div>
-							<div className="space-y-2">
-								<Label htmlFor="email">Email</Label>
-								<Input id="email" type="email" placeholder="Enter your email" />
-							</div>
-						</div>
-						<div className="space-y-2">
-							<Label htmlFor="message">Message</Label>
-							<Textarea
-								id="message"
-								placeholder="Enter your message"
-								rows={6}
-							/>
-						</div>
-						<Button type="submit" className="justify-self-end">
-							Submit
-						</Button>
-					</form>
+					<EmailContactForm courseName={course?.name} />
 				</TabsContent>
 				<TabsContent value="whatsapp" className="space-y-4">
-					<form className="grid gap-4">
-						<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-							<div className="space-y-2">
-								<Label htmlFor="name">Name</Label>
-								<Input id="name" placeholder="Enter your name" />
-							</div>
-							<div className="space-y-2">
-								<Label htmlFor="phone">Phone</Label>
-								<Input id="phone" type="tel" placeholder="Enter your phone" />
-							</div>
-						</div>
-						<div className="space-y-2">
-							<Label htmlFor="message">Message</Label>
-							<Textarea
-								id="message"
-								placeholder="Enter your message"
-								rows={6}
-							/>
-						</div>
-						<Button type="submit" className="justify-self-end">
-							Submit
-						</Button>
-					</form>
+					<WhatsappContactForm courseName={course?.name} />
 				</TabsContent>
 			</Tabs>
 		</div>
