@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "www.investopedia.com",
-			},
-		],
+		unoptimized: true,
 	},
+	output: "export",
 };
 
 export default nextConfig;
