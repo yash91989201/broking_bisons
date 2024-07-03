@@ -1,5 +1,12 @@
+import { Krona_One } from "next/font/google";
+// UTILS
+import { cn } from "@/lib/utils";
+// UI
 import { Button } from "@/components/ui/button";
+// ICONS
 import { ChevronRightCircle } from "lucide-react";
+
+const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
 export default function SecondaryCTASection() {
 	return (
@@ -7,7 +14,12 @@ export default function SecondaryCTASection() {
 			<div className="flex items-center justify-between flex-col max-w-[90vw] mx-auto gap-16">
 				{/* section heading */}
 				<div className="text-center space-y-3">
-					<h2 className="text-xl lg:text-3xl font-semibold space-x-3">
+					<h2
+						className={cn(
+							"text-xl lg:text-3xl font-semibold space-x-3",
+							font.className
+						)}
+					>
 						Elevate your investing skills now !
 					</h2>
 					<p className="text-gray-300 max-w-5xl lg:text-base text-sm xl:text-xl">

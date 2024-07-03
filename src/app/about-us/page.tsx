@@ -1,24 +1,36 @@
 "use client";
+import "aos/dist/aos.css";
+
+import Aos from "aos";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
+import { Krona_One } from "next/font/google";
+// UTILS
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 // ICONS
 import { CheckIcon, ChevronRightCircle } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import Aos from "aos";
-import { useEffect } from "react";
-import "aos/dist/aos.css";
+
+const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
 export default function AboutUsPage() {
 	useEffect(() => {
 		Aos.init({});
 	}, []);
+
 	return (
 		<main>
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="container px-4 md:px-6">
 					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
 						<div data-aos="fade-right">
-							<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+							<h1
+								className={cn(
+									"text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl",
+									font.className
+								)}
+							>
 								About Us
 							</h1>
 							<p className="mt-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">

@@ -1,4 +1,8 @@
 "use client";
+import { Krona_One } from "next/font/google";
+import { useSearchParams } from "next/navigation";
+// UTILS
+import { cn } from "@/lib/utils";
 // UI
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // CUSTOM COMPONENTS
@@ -6,7 +10,8 @@ import EmailContactForm from "@/components/contact/email-contact-form";
 import WhatsappContactForm from "@/components/contact/whatsapp-contact-form";
 // CONSTANTS
 import { COURSES } from "@/constants";
-import { useSearchParams } from "next/navigation";
+
+const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
 export default function ContactUs() {
 	const searchParams = useSearchParams();
@@ -17,7 +22,12 @@ export default function ContactUs() {
 	return (
 		<div className="w-full max-w-3xl mx-auto space-y-8 py-12 md:py-16 lg:py-20 px-3 sm:px-0">
 			<div className="space-y-4">
-				<h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+				<h1
+					className={cn(
+						"text-3xl font-bold tracking-tight sm:text-4xl",
+						font.className
+					)}
+				>
 					Get in touch
 				</h1>
 				<p className="text-gray-500 dark:text-gray-400 max-w-[650px]">
