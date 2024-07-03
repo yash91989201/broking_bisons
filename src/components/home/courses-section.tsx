@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Krona_One } from "next/font/google";
 // UTILS
 import { cn } from "@/lib/utils";
 // UI
@@ -8,6 +9,8 @@ import { Switch } from "@/components/ui/switch";
 import CourseCard from "@/components/home/course-card";
 // CONSTANTS
 import { COURSES } from "@/constants";
+
+const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
 export default function CoursesSection() {
 	const [proCourse, setProCourse] = useState(false);
@@ -22,10 +25,15 @@ export default function CoursesSection() {
 			<div className="flex items-center justify-between flex-col max-w-[90vw] mx-auto">
 				{/* section heading */}
 				<div className="text-center space-y-3">
-					<h2 className="text-xl lg:text-3xl font-semibold space-x-3 text-primary">
+					<h2
+						className={cn(
+							"text-xl lg:text-3xl font-semibold space-x-3 text-primary",
+							font.className
+						)}
+					>
 						Our Courses
 					</h2>
-					<p className="text-gray-300 max-w-xl lg:text-base text-sm">
+					<p className="text-gray-300 max-w-xl lg:text-base text-sm xl:text-xl">
 						Unlock the secrets of stock market investing with courses starting
 						as low as ₹15,000, offering unbeatable value for comprehensive
 						training.

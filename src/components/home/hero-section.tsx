@@ -20,7 +20,6 @@ export default function HeroSection() {
 			</div>
 
 			<div className="absolute top-[50%] sm:top-[60%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-3 sm:gap-6 flex items-center flex-col">
-				{/* <h1 className="animate-text bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-500 bg-clip-text text-transparent text-3xl xl:text-8xl font-semibold"> */}
 				<h1
 					className={cn(
 						"text-white text-xl md:text-3xl xl:text-6xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
@@ -30,13 +29,6 @@ export default function HeroSection() {
 				>
 					BROKING BISONS
 				</h1>
-				{/* <AnimatedTextWord
-					text="BROKING  BISONS"
-					className={cn(
-						"text-white text-lg md:text-3xl xl:text-6xl font-semibold",
-						font.className
-					)}
-				/> */}
 				<p
 					className="text-xs leading-6 text-white text-center lg:text-lg sm:block hidden"
 					data-aos="fade-right"

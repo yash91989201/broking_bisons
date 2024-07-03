@@ -10,7 +10,7 @@ export default function SecondaryCTASection() {
 					<h2 className="text-xl lg:text-3xl font-semibold space-x-3">
 						Elevate your investing skills now !
 					</h2>
-					<p className="text-gray-300 max-w-5xl lg:text-base text-sm">
+					<p className="text-gray-300 max-w-5xl lg:text-base text-sm xl:text-xl">
 						Don&apos;t miss out on this opportunity to learn how to invest and
 						trade in the stock market.
 						<br />
