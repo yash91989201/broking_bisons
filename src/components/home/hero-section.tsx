@@ -6,7 +6,6 @@ import { buttonVariants } from "@/components/ui/button";
 // ICONS
 import { ChevronRightCircle } from "lucide-react";
 // CONSTANTS
-import AnimatedTextWord from "@/components/shared/animated-text";
 import { Krona_One } from "next/font/google";
 import { cn } from "@/lib/utils";
 
