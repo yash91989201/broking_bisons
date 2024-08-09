@@ -22,3 +22,80 @@
   }
   
 }
+
+.responsive-svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-svg {
+  width: 100%;
+  height: 100%;
+}
+
+#responsive-text {
+  font-size: 24px; /* Base font size */
+}
+
+@media (min-width: 640px) {
+  #responsive-text {
+      font-size: 32px; /* sm */
+  }
+}
+
+@media (min-width: 768px) {
+  #responsive-text {
+      font-size: 40px; /* md */
+  }
+}
+
+@media (min-width: 1024px) {
+  #responsive-text {
+      font-size: 48px; /* lg */
+  }
+}
+
+@media (min-width: 1280px) {
+  #responsive-text {
+      font-size: 64px; /* xl */
+  }
+}
+
+@media (min-width: 1536px) {
+  #responsive-text {
+      font-size: 80px; /* 2xl */
+  }
+}
+
+@media (min-width: 1920px) {
+  #responsive-text {
+      font-size: 96px; /* 3xl */
+  }
+}
+
+@media (min-width: 2560px) {
+  #responsive-text {
+      font-size: 112px; /* 4xl */
+  }
+}
+
+@media (min-width: 3200px) {
+  #responsive-text {
+      font-size: 128px; /* 5xl */
+  }
+}
+
+@media (min-width: 3840px) {
+  #responsive-text {
+      font-size: 144px; /* 6xl */
+  }
+}
+
+@media (min-width: 5120px) {
+  #responsive-text {
+      font-size: 160px; /* 7xl */
+  }
+}

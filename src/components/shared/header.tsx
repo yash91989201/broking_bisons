@@ -28,14 +28,17 @@ export default function Header() {
 							<Image src="/assets/logo.png" alt="logo" fill />
 						</div>
 						<div className="flex flex-col gap-1.5 ">
-							<h1
+							{/* <h1
 								className={cn(
 									"sm:text-xl lg:text-3xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
 									font.className
 								)}
 							>
 								Broking Bisons
-							</h1>
+							</h1> */}
+							<div className="relative w-36 md:w-48 lg:w-64 xl:w-72 2xl:w-80 h-10">
+								<Image src="/assets/logo_text.png" alt="logo" fill />
+							</div>
 							<h3 className="text-gray-300 text-xs sm:text-sm">
 								Academy of Stock market
 							</h3>
