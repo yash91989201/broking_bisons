@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div className="image"></div>
       </div>
 
-      <div className="absolute top-[50%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 3xl:w-[60vw] 3xl:top-[40%] backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-3 sm:gap-6 flex items-center flex-col">
+      <div className="absolute top-[50%] mx-auto left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 lg:w-1/2 2xl:w-[65vw] 3xl:top-[40%] backdrop-filter backdrop-blur-md bg-gray-900/30 p-3 rounded-md gap-3 sm:gap-6 flex items-center flex-col">
         <h1
           className={cn(
             "2xl:hidden block text-white text-xl md:text-3xl xl:text-5xl 2xl:font-black font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-red-400 to-orange-600 via-amber-300",
@@ -29,7 +29,7 @@ export default function HeroSection() {
           BROKING BISONS
         </h1>
         <svg
-          viewBox="0 0 1100 180"
+          viewBox="0 0 1098 100"
           preserveAspectRatio="xMinYMin meet"
           xmlns="http://www.w3.org/2000/svg"
           className="hidden 2xl:inline"
@@ -71,7 +71,7 @@ export default function HeroSection() {
         </svg>
 
         <p
-          className="text-xs leading-6 text-white text-center lg:text-sm sm:block hidden 5xl:text-xl"
+          className="text-xs leading-6 text-white text-center lg:text-sm sm:block hidden 2xl:text-2xl 2xl:max-w-3xl"
           data-aos="fade-right"
         >
           BROKING BISONS is a startup offering online courses on stock market

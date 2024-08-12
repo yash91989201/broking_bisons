@@ -39,10 +39,10 @@ export default function WhatsappContactForm({
 
     const whatsappMessage = `Hi I am ${name}, ${message}`;
     const contactForm = document.getElementById("whatsapp-contact-form");
-    const whatsappNumber = 9348159925;
+    const whatsappNumber = 8093387101;
 
     const link = document.createElement("a");
-    link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    link.href = `https://wa.me/+91${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage,
     )}`;
     link.target = "_blank";
