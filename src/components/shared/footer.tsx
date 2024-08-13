@@ -34,7 +34,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="https://m.facebook.com/61557250179825">
-                <span>Facebook</span>
+                <span className="md:hidden">Facebook</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -42,7 +42,7 @@ export default function Footer() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="size-10 md:inline hidden"
+                  className="size-8 md:inline hidden"
                 >
                   <circle cx="24" cy="24" r="24" fill="#3F51B5"></circle>
                   <path
@@ -55,7 +55,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="https://www.instagram.com/brokingbisons">
-                <span>Instagram</span>
+                <span className="md:hidden">Instagram</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -63,7 +63,7 @@ export default function Footer() {
                   width="100"
                   height="100"
                   viewBox="0 0 48 48"
-                  className="size-10 md:inline hidden"
+                  className="size-8 md:inline hidden"
                 >
                   <radialGradient
                     id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
