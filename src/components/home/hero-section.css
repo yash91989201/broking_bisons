@@ -1,9 +1,24 @@
 @keyframes backgroundScroll {
-  0% { background-position: 60% 60%; transform: scale(1); }
-  25% { background-position: 60% 47.5%; transform: scale(1); }
-  50% { background-position: 63% 35%; transform: scale(1.1); }
-  75% { background-position: 61% 22.5%; transform: scale(1); }
-  100% { background-position: 60% 10%; transform: scale(1); }
+  0% {
+    background-position: 60% 60%;
+    transform: scale(1);
+  }
+  25% {
+    background-position: 60% 47.5%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 63% 35%;
+    transform: scale(1.1);
+  }
+  75% {
+    background-position: 61% 22.5%;
+    transform: scale(1);
+  }
+  100% {
+    background-position: 60% 10%;
+    transform: scale(1);
+  }
 }
 
 /* added pauses to each edge of the image */
@@ -11,7 +26,7 @@
 .image {
   width: 100%;
   height: 100%;
-  background: url(/assets/hero-img-7.webp) no-repeat;
+  background: url(/assets/hero-img.jpg) no-repeat;
   background-size: 250%;
   animation: backgroundScroll 5s linear infinite alternate;
   filter: brightness(0.75);
@@ -20,7 +35,6 @@
     background-size: 100%;
     animation: backgroundScroll 10s linear infinite alternate;
   }
-  
 }
 
 .responsive-svg-container {
@@ -42,60 +56,61 @@
 
 @media (min-width: 640px) {
   #responsive-text {
-      font-size: 32px; /* sm */
+    font-size: 32px; /* sm */
   }
 }
 
 @media (min-width: 768px) {
   #responsive-text {
-      font-size: 40px; /* md */
+    font-size: 40px; /* md */
   }
 }
 
 @media (min-width: 1024px) {
   #responsive-text {
-      font-size: 48px; /* lg */
+    font-size: 48px; /* lg */
   }
 }
 
 @media (min-width: 1280px) {
   #responsive-text {
-      font-size: 64px; /* xl */
+    font-size: 64px; /* xl */
   }
 }
 
 @media (min-width: 1536px) {
   #responsive-text {
-      font-size: 80px; /* 2xl */
+    font-size: 80px; /* 2xl */
   }
 }
 
 @media (min-width: 1920px) {
   #responsive-text {
-      font-size: 96px; /* 3xl */
+    font-size: 96px; /* 3xl */
   }
 }
 
 @media (min-width: 2560px) {
   #responsive-text {
-      font-size: 112px; /* 4xl */
+    font-size: 112px; /* 4xl */
   }
 }
 
 @media (min-width: 3200px) {
   #responsive-text {
-      font-size: 128px; /* 5xl */
+    font-size: 128px; /* 5xl */
   }
 }
 
 @media (min-width: 3840px) {
   #responsive-text {
-      font-size: 144px; /* 6xl */
+    font-size: 144px; /* 6xl */
   }
 }
 
 @media (min-width: 5120px) {
   #responsive-text {
-      font-size: 160px; /* 7xl */
+    font-size: 160px; /* 7xl */
   }
 }
+
