@@ -74,19 +74,19 @@ export default function HeroSection() {
           className="text-xs leading-6 text-white text-center lg:text-sm sm:block hidden 2xl:text-2xl 2xl:max-w-3xl"
           data-aos="fade-right"
         >
-          BROKING BISONS is a startup offering online courses on stock market
-          trading and investing. We aim to help individuals of all expertise
-          levels learn and master the art of buying and selling stocks.
-          Leveraging our knowledge and experience, we provide tailored trading
-          courses to meet the needs of our clients.
+          BROKING BISONS is a startup offering online/offline courses on stock
+          market trading and investing. We aim to help individuals of all
+          expertise levels learn and master the art of buying and selling
+          stocks. Leveraging our knowledge and experience, we provide tailored
+          trading courses to meet the needs of our clients.
         </p>
         <p
           className="text-xs leading-6 text-white text-center sm:hidden"
           data-aos="fade-right"
         >
-          We offer online courses to help individuals of all experience levels
-          master stock market trading and investing. Our expert-led, tailored
-          courses are designed to meet your unique needs and goals.
+          We offer online/offline courses to help individuals of all experience
+          levels master stock market trading and investing. Our expert-led,
+          tailored courses are designed to meet your unique needs and goals.
         </p>
         <Link
           href="#courses-section"

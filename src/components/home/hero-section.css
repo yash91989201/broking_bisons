@@ -1,33 +1,31 @@
 @keyframes backgroundScroll {
   0% {
-    background-position: 60% 60%;
+    background-position: 50% 75%; /* Start from the bottom */
     transform: scale(1);
   }
   25% {
-    background-position: 60% 47.5%;
+    background-position: 50% 60%; /* Move up */
     transform: scale(1);
   }
   50% {
-    background-position: 63% 35%;
-    transform: scale(1.1);
+    background-position: 50% 50%; /* Move further up */
+    transform: scale(1.0125); /* Optional scaling */
   }
   75% {
-    background-position: 61% 22.5%;
+    background-position: 50% 40%; /* Continue moving up */
     transform: scale(1);
   }
   100% {
-    background-position: 60% 10%;
+    background-position: 50% 35%; /* End at the top */
     transform: scale(1);
   }
 }
-
-/* added pauses to each edge of the image */
 
 .image {
   width: 100%;
   height: 100%;
   background: url(/assets/hero-img.jpg) no-repeat;
-  background-size: 250%;
+  background-size: 175%;
   animation: backgroundScroll 5s linear infinite alternate;
   filter: brightness(0.75);
 
@@ -113,4 +111,3 @@
     font-size: 160px; /* 7xl */
   }
 }
-
