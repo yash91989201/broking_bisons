@@ -22,7 +22,7 @@ export default function Header() {
         <Link href="/" className="flex-1">
           <div className="flex items-center gap-1.5 sm:gap-3">
             <div className="relative sm:w-24 sm:h-16 w-16 h-12 rounded-full bg-[var(--background)] overflow-hidden">
-              <Image src="/assets/logo.png" alt="logo" fill />
+              <Image src="/assets/logo.webp" alt="logo" fill />
             </div>
             <div className="flex flex-col gap-1.5 ">
               {/* <h1
@@ -34,7 +34,7 @@ export default function Header() {
 								Broking Bisons
 							</h1> */}
               <div className="relative w-36 md:w-48 lg:w-64 xl:w-72 2xl:w-80 h-10">
-                <Image src="/assets/logo_text.png" alt="logo" fill />
+                <Image src="/assets/logo_text.webp" alt="logo" fill />
               </div>
               <h3 className="text-gray-300 text-xs sm:text-sm">
                 Academy of Stock market

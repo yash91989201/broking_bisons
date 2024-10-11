@@ -48,7 +48,7 @@ export default function AboutUsPage() {
               data-aos="flip-left"
             >
               <Image
-                src="/assets/about-us-img.jpg"
+                src="/assets/about-us-img.webp"
                 alt="hero image"
                 fill
                 className="brightness-75"
@@ -80,7 +80,7 @@ export default function AboutUsPage() {
               data-aos="flip-left"
             >
               <Image
-                src="/assets/hero-img.jpg"
+                src="/assets/hero-img.webp"
                 alt="hero image"
                 fill
                 className="brightness-75"
