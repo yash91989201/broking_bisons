@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { WHATSAPP_NUMBER } from "@/constants";
 
 export default function WhatsappContactForm({
   courseName,
@@ -39,10 +40,9 @@ export default function WhatsappContactForm({
 
     const whatsappMessage = `Hi I am ${name}, ${message}`;
     const contactForm = document.getElementById("whatsapp-contact-form");
-    const whatsappNumber = 8093387101;
 
     const link = document.createElement("a");
-    link.href = `https://wa.me/+91${whatsappNumber}?text=${encodeURIComponent(
+    link.href = `https://wa.me/+91${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       whatsappMessage,
     )}`;
     link.target = "_blank";

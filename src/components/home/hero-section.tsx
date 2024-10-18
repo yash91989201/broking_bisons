@@ -8,6 +8,7 @@ import { ChevronRightCircle } from "lucide-react";
 // CONSTANTS
 import { Krona_One } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_NUMBER } from "@/constants";
 
 const font = Krona_One({ subsets: ["latin"], weight: "400" });
 
@@ -71,7 +72,7 @@ export default function HeroSection() {
         </svg>
 
         <p
-          className="text-xs leading-6 text-white text-center lg:text-sm sm:block hidden 2xl:text-2xl 2xl:max-w-3xl"
+          className="text-xs leading-6 text-white text-center lg:text-sm sm:block hidden 2xl:text-xl 2xl:max-w-3xl"
           data-aos="fade-right"
         >
           BROKING BISONS is a startup offering online/offline courses on stock
@@ -88,17 +89,30 @@ export default function HeroSection() {
           levels master stock market trading and investing. Our expert-led,
           tailored courses are designed to meet your unique needs and goals.
         </p>
-        <Link
-          href="#courses-section"
-          className={buttonVariants({
-            className:
-              "gap-3 dark:text-white w-fit h-14 lg:text-lg sm:text-base text-xs",
-          })}
-          data-aos="fade-left"
-        >
-          <span>Explore our courses</span>
-          <ChevronRightCircle className="size-3 sm:size-4" />
-        </Link>
+        <div className="flex items-center gap-3 md:flex-row flex-col">
+          <Link
+            href="#courses-section"
+            className={buttonVariants({
+              className:
+                "gap-3 dark:text-white w-fit h-14 lg:text-lg sm:text-base text-xs",
+            })}
+            data-aos="fade-left"
+          >
+            <span>Explore our courses</span>
+            <ChevronRightCircle className="size-3 sm:size-4" />
+          </Link>
+          <Link
+            href="https://forms.gle/YLM7v2xfiVAAcNMr8"
+            target="_blank"
+            className={buttonVariants({
+              className:
+                "gap-3 dark:text-white w-fit h-14 lg:text-lg sm:text-base text-xs bg-gradient-to-r from-red-400 to-orange-600",
+            })}
+            data-aos="fade-left"
+          >
+            <span>Book a FREE Demo Presentation</span>
+          </Link>
+        </div>
       </div>
     </section>
   );

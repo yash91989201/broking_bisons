@@ -1,3 +1,5 @@
+export const WHATSAPP_NUMBER = 8093387101;
+
 export const BENEFITS = [
   {
     label: " Master Comprehensive Trading Skills",
