@@ -9,25 +9,25 @@ import Footer from "@/components/shared/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Broking Bisons",
-	description:
-		"We offer online courses to help individuals of all experience levels master stock market trading and investing. Our expert-led, tailored courses are designed to meet your unique needs and goals.",
+  title: "Broking Bisons",
+  description:
+    "We offer online courses to help individuals of all experience levels master stock market trading, investing and offline classes. Our expert-led, tailored courses are designed to meet your unique needs and goals.",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className={inter.className}>
-				<ThemeProvider defaultTheme="dark" forcedTheme="dark" attribute="class">
-					<Header />
-					{children}
-					<Footer />
-				</ThemeProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider defaultTheme="dark" forcedTheme="dark" attribute="class">
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }
